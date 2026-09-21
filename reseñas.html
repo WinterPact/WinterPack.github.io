@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reseñas | Winter [ Pact ]</title>
+    <link rel="icon" type="image/svg+xml" href="copo.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="subpage-hero">
+        <nav class="nav container" aria-label="Navegación principal">
+            <a class="brand" href="index.html"><span class="brand-mark">W</span><span>WINTER <b>[ PACT ]</b></span></a>
+            <div class="nav-links"><a href="familia.html">La familia</a><a href="trayectoria.html">Trayectoria</a><a href="tops.html">Tops</a><a href="cadena-mando.html">Cadena de mando</a><a href="rangos.html">Rangos</a><a href="jerarquia.html">Jerarquía</a><a href="codigo.html">Código</a><a href="reseñas.html">Reseñas</a></div>
+        </nav>
+        <div class="container subpage-title"><p class="eyebrow"><span></span> 08 / Comunidad</p><h1>Las <strong>reseñas.</strong></h1></div>
+    </header>
+
+    <main class="reviews-page">
+        <section class="reviews-intro container">
+            <div><h2>La voz de<br><strong>la familia.</strong></h2><p>Comparte tu experiencia dentro de Winter [ Pact ]. Tu opinión ayuda a construir una comunidad más fuerte.</p></div>
+            <form class="review-form" id="review-form">
+                <label for="review-name">Nombre IC</label>
+                <input id="review-name" name="name" type="text" maxlength="40" placeholder="Ej. Kenneth Outhaklez" required>
+                <label>Calificación</label>
+                <div class="rating-input" role="radiogroup" aria-label="Calificación de 1 a 5 estrellas">
+                    <input id="star-5" name="rating" type="radio" value="5" required><label for="star-5" title="5 estrellas">★</label>
+                    <input id="star-4" name="rating" type="radio" value="4"><label for="star-4" title="4 estrellas">★</label>
+                    <input id="star-3" name="rating" type="radio" value="3"><label for="star-3" title="3 estrellas">★</label>
+                    <input id="star-2" name="rating" type="radio" value="2"><label for="star-2" title="2 estrellas">★</label>
+                    <input id="star-1" name="rating" type="radio" value="1"><label for="star-1" title="1 estrella">★</label>
+                </div>
+                <label for="review-message">Mensaje</label>
+                <textarea id="review-message" name="message" rows="5" maxlength="500" placeholder="Cuéntanos tu experiencia..." required></textarea>
+                <button class="button button-primary" type="submit">Publicar reseña <span>↗</span></button>
+                <p class="form-status" id="form-status" aria-live="polite"></p>
+            </form>
+        </section>
+        <section class="reviews-list-section section-dark"><div class="container"><div class="reviews-heading"><div><p class="section-label">Opiniones recientes</p><h2>Lo que dice<br><strong>la familia.</strong></h2></div><span id="review-count">0 reseñas</span></div><div class="reviews-list" id="reviews-list"></div></div></section>
+    </main>
+    <footer class="footer"><div class="container footer-content"><a class="brand" href="index.html"><span class="brand-mark">W</span><span>WINTER <b>[ PACT ]</b></span></a><p>La familia no se elige. Se construye.</p><span>© 2026 Winter [ Pact ]</span></div></footer>
+    <script src="reseñas.js"></script>
+</body>
+</html>
