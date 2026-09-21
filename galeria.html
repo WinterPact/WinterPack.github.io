@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería | Winter [ Pact ]</title>
+    <link rel="icon" type="image/svg+xml" href="copo.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="gallery-page">
+    <header class="subpage-hero">
+        <nav class="nav container" aria-label="Navegación principal">
+            <a class="brand" href="familia.html"><span class="brand-mark">W</span><span>WINTER <b>[ PACT ]</b></span></a>
+            <div class="nav-links"><a href="familia.html">La familia</a><a href="trayectoria.html">Trayectoria</a><a href="tops.html">Tops</a><a href="cadena-mando.html">Cadena de mando</a><a href="rangos.html">Rangos</a><a href="jerarquia.html">Jerarquía</a><a href="codigo.html">Código</a><a href="reseñas.html">Reseñas</a></div>
+        </nav>
+        <div class="container subpage-title"><p class="eyebrow"><span></span> 09 / Solo miembros</p><h1>La <strong>galería.</strong></h1></div>
+    </header>
+    <main class="gallery-main page-content">
+        <div class="container">
+            <div class="gallery-intro"><div><p class="section-label">Momentos del pacto</p><h2>Recuerdos que<br><strong>permanecen.</strong></h2></div><p>Comparte una foto y deja unas palabras para la familia. Este espacio solo está disponible para miembros.</p></div>
+            <form class="gallery-form" id="gallery-form">
+                <label for="gallery-name">Nombre del miembro</label>
+                <input id="gallery-name" name="name" type="text" maxlength="40" placeholder="Ej. WinterPact" required>
+                <label for="gallery-caption">Texto de la publicación</label>
+                <textarea id="gallery-caption" name="caption" maxlength="280" placeholder="Cuenta el momento..." required></textarea>
+                <label for="gallery-image">Foto del recuerdo</label>
+                <input id="gallery-image" name="image" type="file" accept="image/*" required>
+                <button class="button button-primary" type="submit">Publicar recuerdo <span>↗</span></button>
+                <p class="form-status" id="gallery-status" aria-live="polite"></p>
+            </form>
+            <section class="gallery-feed" aria-live="polite"><div class="gallery-feed-heading"><p class="section-label">Publicaciones de la familia</p><span id="gallery-count">0 recuerdos</span></div><div class="gallery-grid" id="gallery-grid"></div></section>
+        </div>
+    </main>
+    <div class="gallery-lightbox" id="gallery-lightbox" hidden role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+        <div class="gallery-lightbox-backdrop" data-lightbox-close></div>
+        <div class="gallery-lightbox-content">
+            <button class="gallery-lightbox-close" type="button" data-lightbox-close aria-label="Cerrar imagen">×</button>
+            <img id="lightbox-image" src="" alt="">
+            <p id="lightbox-title"></p>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="galeria.js"></script>
+</body>
+</html>
